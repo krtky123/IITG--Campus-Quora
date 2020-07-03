@@ -1,4 +1,4 @@
-from django.urls import path
+from django.conf.urls import url
 
 from . import views
 
@@ -6,8 +6,8 @@ app_name = 'accounts'
 
 urlpatterns = [
 
-    path(r'signup/', views.signup, name='signup'),
-    path(r'', views.login, name='login'),
-    path(r'logout/', views.logout, name='logout'),
-    path(r'/(?P<username>[\w.@+-]+)/choose/', views.choose, name='choose'),
+    url(r'signup/', views.signup, name='signup'),
+    url(r'', views.login, name='login'),
+    url(r'logout/', views.logout, name='logout'),
+    url(r'/(?P<username>[\w.@+-]+)/choose/', views.choose, name='choose'),
 ]
